@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>dev.noctud.plugin</id>
+    <name>Noctud</name>
+    <vendor>Noctud.dev</vendor>
+
+    <idea-version/>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.jetbrains.php</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor language="PHP"
+            implementationClass="dev.noctud.plugin.completion.MapViewCompletionContributor"/>
+        <localInspection language="PHP"
+            implementationClass="dev.noctud.plugin.inspection.ReadOnlyCollectionWriteInspection"
+            displayName="Modification of read-only collection"
+            shortName="NoctudReadOnlyCollectionWrite"
+            groupPath="PHP"
+            groupName="Noctud"
+            enabledByDefault="true"
+            level="ERROR"/>
+    </extensions>
+</idea-plugin>
