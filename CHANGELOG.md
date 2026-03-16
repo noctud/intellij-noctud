@@ -4,7 +4,6 @@
 
 ### Added
 
-- Read-only inspection
-- Support for closure parameter types
-- Map view method autocomplete on Map
-
+- Autocomplete for Map view methods — suggests methods from `values`, `keys`, and `entries` directly on Map instances with automatic view property insertion (e.g. `$map->first()` → `$map->values->first()`)
+- Closure parameter type inference — resolves closure parameter types in collection callbacks (e.g. `$list->filter(fn ($v) => $v->...)` correctly types `$v` as the element type)
+- Read-only collection mutation detection — reports errors when calling mutating methods on immutable/read-only collection types
