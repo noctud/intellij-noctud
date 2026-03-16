@@ -20,4 +20,8 @@
             enabledByDefault="true"
             level="ERROR"/>
     </extensions>
+
+    <extensions defaultExtensionNs="com.jetbrains.php">
+        <typeProvider4 implementation="dev.noctud.plugin.type.ClosureParameterTypeProvider"/>
+    </extensions>
 </idea-plugin>

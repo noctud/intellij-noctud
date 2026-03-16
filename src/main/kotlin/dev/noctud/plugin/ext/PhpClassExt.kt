@@ -10,18 +10,18 @@ const val LIST_FQN = "\\Noctud\\Collection\\List\\ListInterface"
 const val WRITABLE_LIST_FQN = "\\Noctud\\Collection\\List\\WritableList"
 
 fun PhpClass.isInstanceOf(fqn: String): Boolean {
-    var current: PhpClass? = this
+    val visited = mutableSetOf<String>()
+    val queue = ArrayDeque<PhpClass>()
+    queue.add(this)
 
-    while (current != null) {
-        if (current.fqn == fqn) {
-            return true
-        }
+    while (queue.isNotEmpty()) {
+        val current = queue.removeFirst()
+        if (!visited.add(current.fqn)) continue
 
-        if (current.implementedInterfaces.any { it.fqn == fqn }) {
-            return true
-        }
+        if (current.fqn == fqn) return true
 
-        current = current.superClass
+        queue.addAll(current.implementedInterfaces)
+        current.superClass?.let { queue.add(it) }
     }
 
     return false
