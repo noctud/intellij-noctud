@@ -9,7 +9,7 @@ Noctud Collection for PhpStorm
 <!-- Plugin description -->
 PhpStorm plugin for [Noctud Collection](https://noctud.dev/collection/getting-started) — a Kotlin-style collection library for PHP 8.4+ with full generics support. Provides enhanced autocomplete and type inference that PhpStorm can't handle on its own due to limited generics support.
 
-If you have any problems with the plugin, [create an issue](https://github.com/noctud/intellij-noctud/issues/new/choose) or join the [Noctud Discord](https://discord.gg/jS3fKe6vW9).
+If you have any problems with the plugin, [create an issue](https://github.com/noctud/intellij-noctud/issues/new/choose) or join the [Noctud Discord](https://discord.noctud.dev).
 <!-- Plugin description end -->
 
 Installation
