@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0] - 2026-03-23
+
+### Added
+
+- New plugin logo
+
+### Removed
+
+- Support for `__invoke` syntax (replaced with offset syntax)
+
 ## [1.0.0] - 2026-02-13
 
 ### Added
